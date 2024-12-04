@@ -17,9 +17,14 @@ function App() {
       <div className="flex flex-col mx-16 p-3 py-10">
         <p className="font-bold py-3 text-lg">about</p>
         <div className="border border-black font-sans h-30 p-3 rounded text-wrap w-full">
-          I graduated in Computer Science and have been working in web development since 2017, specializing in PHP, Javascript, React, and NodeJS. I have experience in containerization with Docker and unit testing with PHPUnit and Jest. Currently, I am focusing on software architecture to create efficient systems. I am looking for opportunities to simplify processes and automate solutions, standing out for my commitment, teamwork skills, and effective communication.
+          I have a degree in Computer Science and have been working in web development since 2017. I have a lot of experience in web development, having worked for years with PHP and Javascript and, more recently, I've started using React and NodeJS.<br />
+          I also have experience with containerization, creating and using Docker containers, and doing unit testing with tools like PHPUnit and Jest. I follow development standards and techniques like Clean, Solid, TDD, and BDD.<br />
+          <br />
+          Lately, I've been focusing my studies on software architecture, improving my programming logic, and my ability to create efficient and well-structured systems.<br />
+          <br />
+          My goal is to simplify and automate processes with the help of technology
         </div>
-      </div>
+      </div >
       <div className="flex flex-col mx-16 p-3 py-5">
         <p className="font-bold py-3 text-lg">experience</p>
         <SkillBar skill="PHP" level={90} />
