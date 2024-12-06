@@ -7,6 +7,7 @@ import GradualSpacing from './components/ui/gradual-spacing'
 import { FadeText } from './components/ui/fade-text'
 import DotPattern from './components/ui/dot-pattern'
 import { cn } from './lib/utils'
+import { ContactDock } from './components/ContactDock'
 
 function App() {
   return (
@@ -58,13 +59,13 @@ function App() {
           <WorkExperience companyName="BizCommerce" yearsWorked="sep 2017 - oct 2018" place="Marília, SP - Brazil"
             responsabilities={"Developed new modules for Magento online stores. Created a shipping module for new shipping methods integration"} />
           <div className="py-2">
-            <p className="font-bold italic">Additional technologies required</p>
+            <p className="font-bold italic">Supporting Technologies</p>
             <SkillDot skill="Magento" />
           </div>
           <WorkExperience companyName="Telecontrol" yearsWorked="nov 2018 - feb 2020" place="Marília, SP - Brazil"
             responsabilities={"Maintained the warranty request platform. Developed a new platform for budget exchanges between resellers and suppliers. Implemented a JavaScript tool to split large files for faster AWS uploads"} />
           <div className="py-2">
-            <p className="font-bold italic">Additional technologies required</p>
+            <p className="font-bold italic">Supporting Technologies</p>
             <div className="flex flex-row gap-1 justify-start">
               <SkillDot skill="AWS" />
               <SkillDot skill="Bootstrap" />
@@ -72,7 +73,7 @@ function App() {
             </div>
             <WorkExperience companyName="Tray eCommerce Platform" yearsWorked="mar 2020 - oct 2023" place="Marília, SP - Brazil"
               responsabilities={"Full-stack developer focused on purchase finalization for online stores. Refactored the customer center for order history and personal information. Developed REST APIs for backend service communication"} />
-            <p className="font-bold italic">Additional technologies required</p>
+            <p className="font-bold italic">Supporting Technologies</p>
             <div className="flex flex-row gap-1 justify-start">
               <SkillDot skill="VueJS" />
               <SkillDot skill="PHPUnit" />
@@ -81,11 +82,15 @@ function App() {
           </div>
           <WorkExperience companyName="Jacto Agriculture Machinery" yearsWorked="mar 2024 - present" place="Pompéia, SP - Brazil"
             responsabilities={"Designed and developed a new warranty request form integrated with Salesforce for case creation"} />
-          <p className="font-bold italic">Additional technologies required</p>
+          <p className="font-bold italic">Supporting Technologies</p>
           <div className="flex flex-row gap-1 justify-start">
             <SkillDot skill="Salesforce" />
           </div>
         </div>
+      </div>
+      <div className="flex flex-col mx-16 p-3 py-10" id="contact">
+        <p className="font-bold py-3 text-lg">contact</p>
+        <ContactDock />
       </div>
     </div>
   );
