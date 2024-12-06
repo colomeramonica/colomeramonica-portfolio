@@ -9,7 +9,7 @@ import {
   TooltipTrigger,
 } from "./ui/tooltip";
 import { Dock, DockIcon } from "./ui/dock";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -81,35 +81,30 @@ const DATA = {
 
 export function ContactDock() {
   return (
-    <div className="bg-background border flex flex-col h-[500px] items-center justify-center md:shadow-xl overflow-hidden relative rounded-lg w-full">
-      <span className="bg-clip-text bg-gradient-to-b dark:from-white dark:to-slate-900/10 font-semibold from-black leading-none pointer-events-none text-8xl text-center text-transparent to-gray-300/80 whitespace-pre-wrap">
-        Dock
-      </span>
-      <TooltipProvider>
-        <Dock direction="middle">
-          {Object.entries(DATA.contact.social).map(([name, social]) => (
-            <DockIcon key={name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    to={social.url}
-                    aria-label={social.name}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full",
-                    )}
-                  >
-                    <social.icon className="size-4" />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
-        </Dock>
-      </TooltipProvider>
-    </div>
+    <TooltipProvider>
+      <Dock direction="middle">
+        {Object.entries(DATA.contact.social).map(([name, social]) => (
+          <DockIcon key={name}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  to={social.url}
+                  aria-label={social.name}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "size-12 rounded-full",
+                  )}
+                >
+                  <social.icon className="size-4" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{name}</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+        ))}
+      </Dock>
+    </TooltipProvider>
   );
 }
