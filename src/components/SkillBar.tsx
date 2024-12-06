@@ -5,7 +5,7 @@ interface SkillBarProps {
 
 export default function SkillBar({ skill, level }: SkillBarProps) {
   return (
-    <div className="flex items-center justify-start mb-4 w-full">
+    <div className="bg-transparent flex items-center justify-start mb-4 w-full">
       <div className="text-black w-40">{skill}</div>
       <div className="bg-gray-400 h-3 relative rounded-full w-1/2">
         <div

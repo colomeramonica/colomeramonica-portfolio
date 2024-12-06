@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-image: url('./assets/nnnoise.svg');
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
