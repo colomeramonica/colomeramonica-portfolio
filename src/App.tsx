@@ -26,7 +26,7 @@ function App() {
           <FadeText text="Mônica Colomera" className="align-middle font-bold font-sans text-4xl text-wrap" direction="up" />
           <GradualSpacing text="full stack web developer" className="font-light font-sans text-gray-700 text-lg text-nowrap tracking-widest" />
         </div>
-      </div >
+      </div>
       <div className="flex flex-col mx-16 p-3 py-10" id="about">
         <p className="font-bold py-3 text-lg">about</p>
         <div className="font-sans h-30 p-3 relative rounded text-wrap w-full">
